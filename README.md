@@ -1,4 +1,4 @@
-# quebra-cabe-a
+# quebra-cabeça
 # 🧩 Quebra-Cabeça Interativo com JavaScript
 
 Projeto desenvolvido para a disciplina **Programação Website I**, com o objetivo de praticar conceitos fundamentais de **HTML, CSS e JavaScript**, focando principalmente na manipulação do **DOM (Document Object Model)**.
