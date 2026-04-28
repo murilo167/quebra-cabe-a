@@ -1,0 +1,61 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Corpo da página */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: linear-gradient(135deg, #020617, #0f172a);
+  color: #f8fafc;
+  padding: 40px;
+}
+
+/* Container principal */
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Título principal */
+h1 {
+  font-size: 36px;
+  margin-bottom: 30px;
+  color: #22c55e;
+}
+
+/* Seções */
+section {
+  margin-bottom: 30px;
+  padding: 20px;
+  border-radius: 16px;
+  background: rgba(15, 23, 42, 0.8);
+  border: 1px solid rgba(148, 163, 184, 0.2);
+}
+
+/* Subtítulos */
+h2 {
+  margin-bottom: 10px;
+  color: #93c5fd;
+}
+
+/* Texto */
+p, li {
+  color: #cbd5e1;
+  line-height: 1.6;
+}
+
+/* Lista */
+ul {
+  padding-left: 20px;
+}
+
+/* Bloco de código */
+pre {
+  background: #020617;
+  padding: 15px;
+  border-radius: 10px;
+  overflow-x: auto;
+  color: #22c55e;
+}

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quebra-Cabeça Interativo</title>
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <main class="container">
+
+    <section class="hero">
+      <p class="tag">Programação Website I</p>
+      <h1>Quebra-Cabeça Interativo</h1>
+      <p class="descricao">
+        Clique para desbloquear a peça e acessar o conteúdo.
+      </p>
+    </section>
+
+    <section class="area-projeto">
+
+      <div class="card-info">
+        <h2>Peça 01</h2>
+
+        <p>Clique no botão para ativar a peça.</p>
+
+        <div class="status-box">
+          <span>Status:</span>
+          <strong id="statusTexto">Bloqueada</strong>
+        </div>
+
+        <button id="btnAtivar" class="btn-principal">
+          Ativar Peça
+        </button>
+      </div>
+
+      <!-- IMPORTANTE: data-link com o destino -->
+      <div id="peca" class="peca bloqueada" data-link="">
+        <div class="peca-conteudo">
+          <span id="iconePeca" class="icone">🔒</span>
+          <h3 id="tituloPeca">Peça Bloqueada</h3>
+          <p id="textoPeca">Aguardando interação...</p>
+        </div>
+      </div>
+
+    </section>
+
+  </main>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
