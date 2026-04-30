@@ -1,28 +1,45 @@
-const botao = document.getElementById("btnAtivar");
-const peca = document.getElementById("peca");
+const pecas = document.querySelectorAll(".peca");
+const contador = document.getElementById("contador");
+const mensagem = document.getElementById("mensagemFinal");
 
-const statusTexto = document.getElementById("statusTexto");
-const icone = document.getElementById("iconePeca");
-const titulo = document.getElementById("tituloPeca");
-const texto = document.getElementById("textoPeca");
+pecas.forEach((peca) => {
 
-// BOTÃO ATIVAR
-botao.addEventListener("click", () => {
-  // muda status
-  statusTexto.innerText = "Desbloqueada";
+  const botao = peca.querySelector(".btn-desbloquear");
+  const icone = peca.querySelector(".icone");
+  const texto = peca.querySelector(".texto");
 
-  // muda visual da peça (fica verde)
-  peca.classList.remove("bloqueada");
-  peca.classList.add("ativa");
+  let ativada = false;
 
-  // muda conteúdo
-  icone.innerText = "🔓";
-  titulo.innerText = "Peça Ativa";
-  texto.innerText = "Clique para ir para a próxima página!";
+  botao.addEventListener("click", (e) => {
+    e.stopPropagation();
 
-  // ativa clique na peça
-  peca.addEventListener("click", () => {
-    // redireciona para aula.html
-    window.location.href = "aula.html";
+    if (!ativada) {
+      peca.classList.add("ativa");
+      icone.innerText = "🔓";
+      texto.innerText = "Clique para entrar";
+
+      botao.innerText = "Desbloqueada";
+      botao.disabled = true;
+
+      ativada = true;
+
+      atualizarContador();
+    }
   });
+
+  peca.addEventListener("click", () => {
+    if (ativada) {
+      window.location.href = peca.dataset.link;
+    }
+  });
+
 });
+
+function atualizarContador() {
+  const total = document.querySelectorAll(".peca.ativa").length;
+  contador.innerText = `Peças desbloqueadas: ${total}`;
+
+  if (total === 4) {
+    mensagem.innerText = "🎉 Parabéns! Você completou!";
+  }
+}

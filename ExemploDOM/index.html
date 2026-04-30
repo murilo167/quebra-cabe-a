@@ -3,51 +3,48 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Quebra-Cabeça Interativo</title>
+  <title>Quebra-Cabeça</title>
 
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-  <main class="container">
+  <h1>🧩 Quebra-Cabeça Interativo</h1>
 
-    <section class="hero">
-      <p class="tag">Programação Website I</p>
-      <h1>Quebra-Cabeça Interativo</h1>
-      <p class="descricao">
-        Clique para desbloquear a peça e acessar o conteúdo.
-      </p>
-    </section>
+  <div class="grid">
 
-    <section class="area-projeto">
+    <div class="peca" data-link="aula1.html">
+      <span class="icone">📘</span>
+      <h3>DOM</h3>
+      <p class="texto">Introdução ao DOM</p>
+      <button class="btn-desbloquear">Desbloquear</button>
+    </div>
 
-      <div class="card-info">
-        <h2>Peça 01</h2>
+    <div class="peca" data-link="aula2.html">
+      <span class="icone">⚡</span>
+      <h3>Eventos</h3>
+      <p class="texto">Eventos em JS</p>
+      <button class="btn-desbloquear">Desbloquear</button>
+    </div>
 
-        <p>Clique no botão para ativar a peça.</p>
+    <div class="peca" data-link="aula3.html">
+      <span class="icone">🎨</span>
+      <h3>Estilo</h3>
+      <p class="texto">Manipulação CSS</p>
+      <button class="btn-desbloquear">Desbloquear</button>
+    </div>
 
-        <div class="status-box">
-          <span>Status:</span>
-          <strong id="statusTexto">Bloqueada</strong>
-        </div>
+    <div class="peca" data-link="aula.html">
+      <span class="icone">🧠</span>
+      <h3>Lógica</h3>
+      <p class="texto">Variáveis e condições</p>
+      <button class="btn-desbloquear">Desbloquear</button>
+    </div>
 
-        <button id="btnAtivar" class="btn-principal">
-          Ativar Peça
-        </button>
-      </div>
+  </div>
 
-      <!-- IMPORTANTE: data-link com o destino -->
-      <div id="peca" class="peca bloqueada" data-link="">
-        <div class="peca-conteudo">
-          <span id="iconePeca" class="icone">🔒</span>
-          <h3 id="tituloPeca">Peça Bloqueada</h3>
-          <p id="textoPeca">Aguardando interação...</p>
-        </div>
-      </div>
-
-    </section>
-
-  </main>
+  <div id="contador">Peças desbloqueadas: 0</div>
+  <div id="mensagemFinal"></div>
 
   <script src="js/script.js"></script>
 </body>

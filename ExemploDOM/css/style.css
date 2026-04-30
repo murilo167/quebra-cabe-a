@@ -1,84 +1,156 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 body {
-  min-height: 100vh;
-  font-family: Arial, Helvetica, sans-serif;
-  background:
-    radial-gradient(circle at top left, #1d4ed8, transparent 30%),
-    linear-gradient(135deg, #020617, #0f172a);
-  color: #f8fafc;
-}
-
-.container {
-  width: 90%;
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 60px 0;
-}
-
-.hero {
+  font-family: Arial;
+  background: #0f172a;
+  color: white;
   text-align: center;
-  margin-bottom: 50px;
 }
 
-.area-projeto {
+.grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 32px;
-  align-items: center;
+  grid-template-columns: repeat(2, 200px);
+  gap: 20px;
+  justify-content: center;
+  margin-top: 40px;
 }
 
-.card-info {
-  background-color: rgba(15, 23, 42, 0.85);
-  border-radius: 24px;
-  padding: 32px;
+.peca {
+  background: #1e293b;
+  padding: 30px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: 0.3s;
 }
 
-.status-box {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 20px;
+.peca span {
+  font-size: 40px;
+  display: block;
 }
 
-.btn-principal {
-  width: 100%;
-  padding: 15px;
+.peca:hover {
+  transform: scale(1.08);
+}
+
+.peca:active {
+  transform: scale(0.95);
+}
+
+.ativa {
+  background: #22c55e;
+}.ativa {
+  background: #22c55e;
+  transform: scale(1.05);
+}.btn-desbloquear {
+  margin-top: 10px;
+  padding: 8px;
   border: none;
-  border-radius: 16px;
-  background: linear-gradient(135deg, #2563eb, #7c3aed);
+  border-radius: 10px;
+  background: #3b82f6;
   color: white;
   cursor: pointer;
 }
 
-/* PEÇA */
+.btn-desbloquear:hover {
+  background: #2563eb;
+}
+
+.ativa {
+  background: #22c55e;
+}
+
+#contador {
+  margin-top: 20px;
+  font-size: 18px;
+}
+
+#mensagemFinal {
+  margin-top: 10px;
+  font-size: 20px;
+  color: #fbbf24;
+}body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #020617, #0f172a);
+  color: white;
+  text-align: center;
+}
+
+/* TÍTULO */
+h1 {
+  margin-top: 30px;
+  font-size: 32px;
+}
+
+/* CONTADOR */
+#contador {
+  margin-top: 10px;
+  color: #94a3b8;
+}
+
+/* GRID */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+  padding: 40px;
+  max-width: 900px;
+  margin: auto;
+}
+
+/* CARD */
 .peca {
-  min-height: 300px;
-  border-radius: 30px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: 0.4s;
+  background: rgba(30, 41, 59, 0.8);
+  backdrop-filter: blur(10px);
+  padding: 25px;
+  border-radius: 20px;
+  transition: 0.3s;
+  cursor: pointer;
+  border: 1px solid rgba(255,255,255,0.1);
 }
 
-/* BLOQUEADA */
-.bloqueada {
-  background: #334155;
-  filter: grayscale(40%);
-  cursor: not-allowed;
+/* HOVER */
+.peca:hover {
+  transform: translateY(-5px) scale(1.03);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.4);
 }
 
-/* ATIVA */
+/* ATIVO */
 .ativa {
   background: linear-gradient(135deg, #16a34a, #22c55e);
+  animation: pulse 0.4s ease;
+}
+
+/* ANIMAÇÃO */
+@keyframes pulse {
+  0% { transform: scale(0.9); }
+  100% { transform: scale(1.05); }
+}
+
+/* ÍCONE */
+.icone {
+  font-size: 45px;
+  display: block;
+  margin-bottom: 10px;
+}
+
+/* BOTÃO */
+.btn-desbloquear {
+  margin-top: 15px;
+  padding: 10px;
+  width: 100%;
+  border: none;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #2563eb, #7c3aed);
+  color: white;
   cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn-desbloquear:hover {
   transform: scale(1.05);
 }
 
-/* HOVER só quando ativa */
-.ativa:hover {
-  transform: scale(1.08);
+/* FINAL */
+#mensagemFinal {
+  margin-top: 20px;
+  font-size: 20px;
+  color: #22c55e;
 }
